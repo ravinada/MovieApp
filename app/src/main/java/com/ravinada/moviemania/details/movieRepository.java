@@ -135,7 +135,7 @@ class movieRepository {
         final MutableLiveData<List<Movie>> movieData = new MutableLiveData<>();
         TMDBApi.getTopRatedMovies(apiKey, language, page).enqueue(new Callback<MovieResponse>() {
             @Override
-            public void onResponse(@NotNull Call<MovieResponse> call, Response<MovieResponse> response) {
+            public void onResponse(@NotNull Call<MovieResponse> call, @NotNull Response<MovieResponse> response) {
                 if (response.isSuccessful()) {
                     assert response.body() != null;
                     topRatedMovies.addAll(response.body().getMovies());
@@ -198,7 +198,7 @@ class movieRepository {
         final MutableLiveData<List<ReviewData>> reviewData = new MutableLiveData<>();
         TMDBApi.getMovieReviews(movieId, apiKey).enqueue(new Callback<Review>() {
             @Override
-            public void onResponse(Call<Review> call, @NotNull Response<Review> response) {
+            public void onResponse(@NotNull Call<Review> call, @NotNull Response<Review> response) {
                 if (response.isSuccessful()) {
                     assert response.body() != null;
                     reviewData.setValue(response.body().getReviewData());
@@ -206,7 +206,7 @@ class movieRepository {
             }
 
             @Override
-            public void onFailure(@NotNull Call<Review> call, Throwable t) {
+            public void onFailure(@NotNull Call<Review> call, @NotNull Throwable t) {
                 reviewData.setValue(null);
             }
         });
