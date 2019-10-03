@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Netflix</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="popular_movies">Popular</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="favorites">Favourites</string>
+
+    <string name="action_sort">Sort By</string>
+    <string name="movie_detail_overview_title">Synopsis</string>
+    <string name="movie_detail_videos_title">Trailers</string>
+    <string name="movie_detail_reviews_title">Reviews</string>
+</resources>

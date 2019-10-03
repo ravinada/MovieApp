@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:id="@+id/nsv"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_medium">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_medium">
+
+            <TextView
+                android:id="@+id/item_movie_release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:textColor="@color/white"
+                tools:text="Release date: 24.09.2019" />
+
+            <TextView
+                android:id="@+id/text_movie_title"
+                style="@android:style/TextAppearance.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/spacing_medium"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                tools:text="Avengere" />
+
+            <RatingBar
+                android:id="@+id/movie_rating"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/textgrey"
+                android:numStars="5"
+                android:paddingTop="@dimen/spacing_medium"
+                android:progressBackgroundTint="@color/white"
+                android:progressTint="#f2b01e" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_movie_overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/movie_detail_cards_margin_left_right"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginRight="@dimen/movie_detail_cards_margin_left_right"
+                android:layout_marginBottom="@dimen/spacing_small">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey"
+                    android:padding="@dimen/spacing_medium">
+
+                    <TextView
+                        android:id="@+id/text_movie_overview_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/movie_detail_overview_title"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/text_movie_overview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_movie_overview_title"
+                        android:paddingTop="@dimen/spacing_medium"
+                        android:textColor="@color/textgrey"
+                        tools:text="A plot synopsis" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_movie_videos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_movie_overview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/movie_detail_cards_margin_left_right"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginRight="@dimen/movie_detail_cards_margin_left_right"
+                android:backgroundTint="@color/grey"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/card_movie_videos_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey"
+                    android:padding="@dimen/spacing_medium">
+
+                    <TextView
+                        android:id="@+id/text_videos_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/movie_detail_videos_title"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/movie_videos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_videos_title"
+                        android:background="@color/white"
+                        android:backgroundTint="@color/grey"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/spacing_medium"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_movie_reviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_movie_videos"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/movie_detail_cards_margin_left_right"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginRight="@dimen/movie_detail_cards_margin_left_right"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/grey">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_medium">
+
+                    <TextView
+                        android:id="@+id/text_reviews_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/movie_detail_reviews_title"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/movie_reviews"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text_reviews_title"
+                        android:paddingTop="@dimen/spacing_medium" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
