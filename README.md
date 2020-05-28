@@ -1,5 +1,5 @@
 # MovieApp
-The purpose of this project was to built an app, optimized for tablets, to help users discover popular and highly rated movies on the web. It displays a scrolling grid of movie trailers, launches a details screen whenever a particular movie is selected, allows users to save favorites, play trailers, and read user reviews. This app utilizes core Android user interface components and fetches movie information using themoviedb.org web API.
+The purpose of this project was to built an app, to help users discover popular and highly rated movies on the web. It displays a scrolling grid of movie trailers, launches a details screen whenever a particular movie is selected, allows users to save favorites, play trailers, and read user reviews. This app utilizes core Android user interface components and fetches movie information using themoviedb.org web API.
  
  <img width="33%" src="https://user-images.githubusercontent.com/49580276/83109726-83f14600-a0df-11ea-842b-866e6b9c30b3.png" />          <img width="33%" src="https://user-images.githubusercontent.com/49580276/83109752-90759e80-a0df-11ea-9c74-e279a9d17b97.png" />            <img width="33%" src="https://user-images.githubusercontent.com/49580276/83109765-97041600-a0df-11ea-82f2-f302c58c5aaa.png" />
  
